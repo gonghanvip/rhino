@@ -1,0 +1,19 @@
+{
+  "name": "test_package",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify mymodule.js -t babelify --standalone mymodule -o bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "babelify": "^10.0.0"
+  },
+  "dependencies": {
+    "core-js": "^3.23.5"
+  }
+}
