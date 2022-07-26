@@ -37,11 +37,11 @@ public class JSLibrary
     }
     public static void main(String [] args) throws Exception {
         ScriptEngine engine = new ScriptEngineManager().getEngineByName ("rhino");
-        data data = new data();
         Context.enter().getWrapFactory().setJavaPrimitiveWrap(false);
         Context context = Context.enter();
         Scriptable globalScope = context.initStandardObjects();
 
+        //data data = new data();
         //https://mathjs.org/download.html
         // full bundle from unpkg: math.js (version 11.0.1, 191 kB, minified and gzipped)
         //math.js (version 11.0.1, 191 kB, minified and gzipped)
