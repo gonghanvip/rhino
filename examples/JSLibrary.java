@@ -56,7 +56,6 @@ public class JSLibrary
 //            System.out.println("Return user input square by calling a java inner class \n"
 //                    + "Result = " +  ((Invocable)engine).invokeFunction("test"));
 
-
             engine.eval("function test_A() {return math.derivative('x^2 + x', 'x').toString();}");
             System.out.println("Using math.js to evaulate the derivative of the following expression \n" +
             "x^2 + x \n" + "Result = " +  ((Invocable)engine).invokeFunction("test_A"));
