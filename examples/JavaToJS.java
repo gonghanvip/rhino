@@ -15,8 +15,8 @@ public class JavaToJS
             //String clientCode = "return tf.get() + data";
             //TODO Find a way to attach library (npm, etc)
             String clientCode = "function my() {return 'me';}; function transform(tf, data) { var res = {}; res.x= my(); res.inp=data; return JSON.stringify(res);}";
-            String ourCode = clientCode + "function run(tf, data) { return transform(tf, data); } ";
-            System.out.println(ourCode);
+            String ourCode = clientCode + "function run(tf, data) { return transform(tf, data); }";
+            //System.out.println(ourCode);
             engine.eval(ourCode);
             System.out.println("Result:" + ((Invocable)engine).invokeFunction("run", new Data(), "input data"));
         }
